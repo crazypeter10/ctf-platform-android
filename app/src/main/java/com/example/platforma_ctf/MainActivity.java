@@ -25,12 +25,17 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         DatabaseHelper dbHelper = new DatabaseHelper(this);
 
         Button loginButton = findViewById(R.id.login_button);
+        Button jsonButton = findViewById(R.id.json_button);
 
         loginButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         });
 
+        jsonButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, JsonActivity.class);
+            startActivity(intent);
+        });
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);

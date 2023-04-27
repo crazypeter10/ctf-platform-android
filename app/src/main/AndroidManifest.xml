@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Platforma_ctf"
         tools:targetApi="31">
+        <activity
+            android:name=".JsonActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -37,4 +41,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
